@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deiveegam Nursery - Premium Coconut Plants & Products in Salem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="icon" href="img/logo3.jpg" />
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="/img/logo.jpg" alt="Deiveegam Nursery Logo - Natural coconut tree design">
+                <h1>Deiveegam Nursery</h1>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search for coconut plants, oil, products..."
+                    data-en="Search for coconut plants, oil, products..."
+                    data-ta="தேங்காய் செடிகள், எண்ணெய், தயாரிப்புகளைத் தேடுங்கள்...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="nav-actions">
+                <button class="nav-btn" id="languageBtn">
+                    <i class="fas fa-globe"></i>
+                    <span id="langText">English</span>
+                </button>
+
+                <button class="nav-btn" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                    <span id="themeText" data-en="Mode" data-ta="பயன்முறை">Mode</span>
+                </button>
+
+                <button class="nav-btn cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                    <span data-en="Cart" data-ta="கூடை">Cart</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <div class="slide active">
+                <img src="img/healthy.avif"
+                    alt="Lush green coconut plantation with tall mature trees under bright sunny sky">
+                <div class="slide-caption">
+                    <h2 data-en="Premium Coconut Plants" data-ta="உயர்தர தேங்காய் செடிகள்">Premium Coconut Plants</h2>
+                    <p data-en="Serving Salem for Over 10 Years"
+                        data-ta="10 ஆண்டுகளுக்கும் மேலாக சேலத்திற்கு சேவை செய்கிறோம்">Serving Salem for Over 10 Years
+                    </p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="/img/collection.jpg"
+                    alt="Fresh young coconut saplings in nursery pots with healthy green leaves in natural sunlight">
+                <div class="slide-caption">
+                    <h2 data-en="Healthy Saplings" data-ta="ஆரோக்கியமான நாற்றுகள்">Healthy Saplings</h2>
+                    <p data-en="Naturally Grown with Care" data-ta="இயற்கையாக பராமரிப்புடன் வளர்க்கப்படுகிறது">Naturally
+                        Grown with Care</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="/img/coco oil.jpg"
+                    alt="Golden pure coconut oil in glass bottles on wooden table with fresh coconuts and green leaves">
+                <div class="slide-caption">
+                    <h2 data-en="Pure Coconut Oil" data-ta="தூய தேங்காய் எண்ணெய்">Pure Coconut Oil</h2>
+                    <p data-en="100% Natural & Cold Pressed" data-ta="25% இயற்கை மற்றும் குளிர் அழுத்தப்பட்ட">100%
+                        Natural & Cold Pressed</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="/img/all coc producr.jpg"
+                    alt="Fresh brown coconuts arranged beautifully with coconut shells, coir and traditional products">
+                <div class="slide-caption">
+                    <h2 data-en="All Coconut Products" data-ta="அனைத்து தேங்காய் பொருட்கள்">All Coconut Products</h2>
+                    <p data-en="Shells, Coir, Oil & More" data-ta="சிப்பிகள், நார், எண்ணெய் மற்றும் பல">Shells, Coir,
+                        Oil & More</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="/img/delivery3.jpg"
+                    alt="Free delivery truck with coconut plants driving through rural Salem landscape with palm trees">
+                <div class="slide-caption">
+                    <h2 data-en="Free Delivery" data-ta="இலவச வீடு வரை பொருள் பெறுதல்">Free Delivery</h2>
+                    <p data-en="Within 25 KM from Salem" data-ta="சேலத்திலிருந்து 25 கி.மீ க்குள்">Within 25 KM from
+                        Salem</p>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+        <div class="slider-dots"></div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h2 data-en="Welcome to Deiveegam Nursery" data-ta="தெய்வீகம் நர்சரிக்கு வரவேற்கிறோம்">Welcome to
+                        Deiveegam Nursery</h2>
+                    <p data-en="For over a decade, Deiveegam Nursery has been Salem's trusted source for premium coconut plants and authentic coconut products. Located in the heart of Tamil Nadu, we have dedicated ourselves to nurturing healthy, robust coconut saplings that thrive in our tropical climate."
+                        data-ta="தெய்வீகம் நர்சரி – கடந்த 10 வருடங்களாக சேலத்தில் உயர்தர தேங்காய் செடிகள் மற்றும் இயற்கை தேங்காய் பொருட்கள் வழங்கி வருகிறோம். தமிழ் நாட்டின் சூழலுக்கு ஏற்ப வளர்க்கப்பட்ட, ஆரோக்கியமான மற்றும் அதிக விளைச்சல் தரும் தேங்காய் செடிகள் எங்களுடைய சிறப்பு.
+">Deiveegam Nursery – Serving Minnampalli, Salem for 10+ years with premium coconut plants and natural coconut
+                        products. We grow healthy, high-yielding saplings, adapted for Tamil Nadu’s climate.
+                    </p>
+
+                    <p data-en="Our expertise spans across multiple varieties of coconut plants, each carefully cultivated to ensure maximum yield and disease resistance. We understand the unique soil and weather conditions of Salem, and our plants are specifically adapted to flourish in this environment. Whether you're a commercial farmer or a home gardener, we have the perfect coconut plant for your needs."
+                        data-ta="நாம் பலவகை தேங்காய் செடிகளை வழங்குகிறோம் — நோய் எதிர்ப்பு திறன் மற்றும் வலுவான வளர்ச்சிக்கு பெயர்பெற்றவை. விவசாயிகள் முதல் வீட்டு தோட்ட உரிமையாளர்கள் வரை அனைவருக்கும் ஏற்றது. தெளித்த இயற்கை தேங்காய் எண்ணெய், சோறு, தோட்டிகள் உள்ளிட்ட தயாரிப்புகளும் உள்ளன.
+">We offer multiple coconut varieties, known for disease resistance and strong growth. From farmers to home gardeners,
+                        our plants suit all needs. Products include cold-pressed coconut oil, coir, and shells.</p>
+
+                    <p data-en="Beyond just plants, we pride ourselves on offering a complete range of coconut-related products. Our pure, cold-pressed coconut oil is extracted using traditional methods that preserve all the natural goodness and nutritional value. From coconut shells and coir to specialized coconut products, we are your one-stop destination for everything coconut."
+                        data-ta="எங்களிடம் மிகவும் குறைந்த விலையில் சிறிய, நடுத்தர மற்றும் பெரிய அளவிலான செடிகள் கிடைக்கும். சேலம் மாவட்டத்தில் 25 கிமீ வரை இலவச டெலிவரி வழங்குகிறோம். நாங்கள் வளர்ப்பு ஆலோசனையும் வழங்குகிறோம். உங்கள் தேங்காய் பயிர் நலமாக வளர நம்பிக்கையுடன் தேர்வுசெய்க — தெய்வீகம் நர்சரி!
+">We ensure affordable prices, free delivery within 25 km, and ongoing planting support. Choose Deiveegam for quality,
+                        trust, and everything coconut-related.
+                    </p>
+                </div>
+                <div class="intro-image">
+                    <img src="/img/delivery2.jpg"
+                        alt="Professional nursery owner holding healthy coconut sapling in lush green nursery">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 data-en="About Our Natural Growing Process" data-ta="எங்கள் இயற்கை வளர்ப்பு செயல்முறை பற்றி">About Our
+                Natural Growing Process</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="/img/about.jpg"
+                        alt="Close up of hands planting coconut seedling in rich organic soil with natural composting materials">
+                </div>
+                <div class="about-text">
+                    <p data-en="At Deiveegam Nursery, we follow completely natural and organic methods for growing our coconut plants. We believe that nature knows best, and our growing process reflects this philosophy. Every sapling is nurtured using traditional techniques passed down through generations, combined with modern understanding of plant biology."
+                        data-ta="தெய்வீகம் நர்சரியில், நாங்கள் முழுமையாக இயற்கை மற்றும் கரிம முறைகளை பயன்படுத்தி தேங்காய் செடிகளை வளர்க்கிறோம். பாரம்பரிய உத்தியமங்களும், நவீன அறிவும் ஒன்றாக இணைந்து எங்களுடைய வளர்ப்பு முறையை அமைத்துள்ளன">
+                        At <b> Deiveegam Nursery,</b> we grow our coconut plants using completely natural and organic methods.
+                        We combine traditional techniques with modern knowledge to ensure healthy, high-quality
+                        saplings.
+                    </p>
+
+                    <p data-en="Our plants are grown in nutrient-rich, organic soil that we prepare ourselves using natural composting methods. We never use chemical fertilizers or harmful pesticides. Instead, we rely on natural pest management techniques and organic fertilizers made from cow dung, neem cake, and other natural ingredients. This ensures that our plants are not only healthy but also environmentally friendly."
+                        data-ta="எங்களுடைய மண் மாடுப்புழுகொட்டையும், வேப்பைபிண்டம் போன்ற இயற்கை உரங்களால் வளமாக்கப்படுகிறது. வேதியியல் உரங்கள், பாசனிகள் எதையும் பயன்படுத்தவில்லை. இயற்கை பூச்சி கட்டுப்பாடு முறைகளையே நாங்கள் பின்பற்றுகிறோம்.
+">Our soil is enriched with organic compost made from cow dung, neem cake, and other natural inputs. We avoid chemical
+                        fertilizers and use natural pest control to protect our plants and the environment.
+                    </p>
+
+                    <p data-en="Each coconut sapling receives individual attention and care. We carefully select the best quality seeds from high-yielding mother plants. These seeds are germinated in specially prepared beds with optimal drainage and moisture retention. The young seedlings are then transplanted to individual bags where they grow for several months before being ready for sale."
+                        data-ta="
+ஒவ்வொரு செடியும் அனுபவமும் அக்கறையும் கொண்டு வளர்க்கப்படுகிறது. சிறந்த விதைகளை தேர்ந்தெடுத்து, சிறப்பான நீரேற்பும் வடிகாலும் உள்ள படுக்கைகளில் முளைக்க வைத்து, பின்பு தனித்தனியாக பராமரிக்கிறோம். டிரிப் பாசன முறையின் மூலம் தண்ணீர் வீணாகாமல், செடியிற்கு தேவையான அளவில் வழங்கப்படுகிறது.
+">Each sapling is given individual care, from seed selection to transplantation. With drip irrigation and careful water
+                        management, our plants develop strong roots and adapt well after planting. The result? Stronger,
+                        healthier coconut plants with higher survival and early fruiting — naturally grown, the
+                        Deiveegam way.</p>
+
+                    <p data-en="The result of our natural growing process is evident in the quality of our plants. They have stronger immunity, better adaptability to local conditions, and higher survival rates after transplantation. Our customers consistently report excellent growth and early fruiting from our plants. This is the power of natural, patient, and careful cultivation - the Deiveegam way."
+                        data-ta="
+இந்த இயற்கை வளர்ப்பு முறையின் பலனாக, எங்களுடைய செடிகள் வலிமையான வேர்களுடன், அதிக உயிர்வாழும் திறன், மற்றும் விரைவில் விளைச்சலைத் தரும் தன்மையுடன் வளர்கின்றன — இதுவே தெய்வீகம் நர்சரியின் தனித்துவம்!
+.
+">The result of our natural growing process is evident in the quality of our plants. They have stronger immunity, better adaptability to local conditions, and higher survival rates after transplantation. Our customers consistently report excellent growth and early fruiting from our plants. This is the power of natural, patient, and careful cultivation - the Deiveegam way.</p>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <h2 data-en="Our Products" data-ta="எங்கள் தயாரிப்புகள்">Our Products</h2>
+
+            <!-- Coconut Plants -->
+            <div class="product-category">
+                <h3 data-en="Coconut Plants" data-ta="தேங்காய் செடிகள்">Coconut Plants</h3>
+                <div class="products-grid">
+                    <div class="product-card" data-product-id="large-plant">
+                        <img src="/img/coco large.webp"
+                            alt="Large healthy coconut sapling in black nursery bag with vibrant green fronds ready for planting">
+                        <div class="product-info">
+                            <h4 data-en="Large Coconut Plant" data-ta="பெரிய தேங்காய் செடி">Large Coconut Plant</h4>
+                            <p class="product-desc" data-en="Mature sapling, 18-24 months old, 4-5 feet height"
+                                data-ta="முதிர்ந்த நாற்று, 18-24 மாதங்கள் பழமை, 4-5 அடி உயரம்">Mature sapling, 18-24
+                                months old, 4-5 feet height</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5 (328)</span>
+                            </div>
+                            <div class="price">₹60</div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary add-to-cart" data-product="Large Coconut Plant"
+                                    data-price="60">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span data-en="Add to Cart" data-ta="கூடையில் சேர்க்கவும்">Add to Cart</span>
+                                </button>
+                                <button class="btn btn-primary buy-now" data-product="Large Coconut Plant"
+                                    data-price="60">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span data-en="Buy Now" data-ta="இப்போது வாங்கவும்">Buy Now</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="medium-plant">
+                        <img src="/img/coco medium.jpg"
+                            alt="Medium coconut plant with spreading green leaves in terracotta pot perfect garden size">
+                        <div class="product-info">
+                            <h4 data-en="Medium Coconut Plant" data-ta="நடுத்தர தேங்காய் செடி">Medium Coconut Plant</h4>
+                            <p class="product-desc" data-en="Growing sapling, 12-18 months old, 2-3 feet height"
+                                data-ta="வளரும் நாற்று, 12-18 மாதங்கள் பழமை, 2-3 அடி உயரம்">Growing sapling, 12-18
+                                months old, 2-3 feet height</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.6 (456)</span>
+                            </div>
+                            <div class="price">₹80</div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary add-to-cart" data-product="Medium Coconut Plant"
+                                    data-price="80">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span data-en="Add to Cart" data-ta="கூடையில் சேர்க்கவும்">Add to Cart</span>
+                                </button>
+                                <button class="btn btn-primary buy-now" data-product="Medium Coconut Plant"
+                                    data-price="80">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span data-en="Buy Now" data-ta="இப்போது வாங்கவும்">Buy Now</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="small-plant">
+                        <img src="/img/coco small.jpg"
+                            alt="Small young coconut seedling with tender green shoots in small growing bag fresh start">
+                        <div class="product-info">
+                            <h4 data-en="Small Coconut Plant" data-ta="சிறிய தேங்காய் செடி">Small Coconut Plant</h4>
+                            <p class="product-desc" data-en="Young seedling, 6-12 months old, 1-2 feet height"
+                                data-ta="இளம் நாற்று, 6-12 மாதங்கள் பழமை, 1-2 அடி உயரம்">Young seedling, 6-12 months
+                                old, 1-2 feet height</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.7 (612)</span>
+                            </div>
+                            <div class="price">₹90</div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary add-to-cart" data-product="Small Coconut Plant"
+                                    data-price="90">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span data-en="Add to Cart" data-ta="கூடையில் சேர்க்கவும்">Add to Cart</span>
+                                </button>
+                                <button class="btn btn-primary buy-now" data-product="Small Coconut Plant"
+                                    data-price="90">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span data-en="Buy Now" data-ta="இப்போது வாங்கவும்">Buy Now</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="dwarf-plant">
+                        <img src="/img/dwarf.avif"
+                            alt="Dwarf coconut variety compact plant with golden yellow coconuts ideal for small gardens">
+                        <div class="product-info">
+                            <h4 data-en="Dwarf Coconut Plant" data-ta="குட்டை தேங்காய் செடி">Dwarf Coconut Plant</h4>
+                            <p class="product-desc" data-en="Compact variety, early fruiting, space-saving"
+                                data-ta="சிறிய வகை, விரைவு பலன், இடம் சேமிக்கும்">Compact variety, early fruiting,
+                                space-saving</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.4 (289)</span>
+                            </div>
+                            <div class="price">₹120</div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary add-to-cart" data-product="Dwarf Coconut Plant"
+                                    data-price="120">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span data-en="Add to Cart" data-ta="கூடையில் சேர்க்கவும்">Add to Cart</span>
+                                </button>
+                                <button class="btn btn-primary buy-now" data-product="Dwarf Coconut Plant"
+                                    data-price="120">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span data-en="Buy Now" data-ta="இப்போது வாங்கவும்">Buy Now</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coconut Oil -->
+            <div class="product-category">
+                <h3 data-en="Coconut Oil" data-ta="தேங்காய் எண்ணெய்">Coconut Oil</h3>
+                <div class="products-grid">
+                    <div class="product-card" data-product-id="oil-500ml">
+                        <img src="/img/coco oil 250ml.jpg"
+                            alt="500ml glass bottle of golden pure coconut oil with traditional label and fresh coconut beside">
+                        <div class="product-info">
+                            <h4 data-en="Pure Coconut Oil (500ml)" data-ta="தூய தேங்காய் எண்ணெய் (500மி.லி)">Pure
+                                Coconut Oil (250ml)</h4>
+                            <p class="product-desc" data-en="Cold-pressed, 100% natural, traditional method"
+                                data-ta="குளிர் அழுத்தப்பட்ட, 100% இயற்கை, பாரம்பரிய முறை">Cold-pressed, 100% natural,
+                                traditional method</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5 (974)</span>
+                            </div>
+                            <div class="price">₹83</div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary add-to-cart" data-product="Pure Coconut Oil (250ml)"
+                                    data-price="83">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span data-en="Add to Cart" data-ta="கூடையில் சேர்க்கவும்">Add to Cart</span>
+                                </button>
+                                <button class="btn btn-primary buy-now" data-product="Pure Coconut Oil (250ml)"
+                                    data-price="83">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span data-en="Buy Now" data-ta="இப்போது வாங்கவும்">Buy Now</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-product-id="oil-500ml">
+                        <img src="/img/coco oil 500ml.jpg"
+                            alt="500ml glass bottle of golden pure coconut oil with traditional label and fresh coconut beside">
+                        <div class="product-info">
+                            <h4 data-en="Pure Coconut Oil (500ml)" data-ta="தூய தேங்காய் எண்ணெய் (500மி.லி)">Pure
+                                Coconut Oil (500ml)</h4>
+                            <p class="product-desc" data-en="Cold-pressed, 100% natural, traditional method"
+                                data-ta="குளிர் அழுத்தப்பட்ட, 100% இயற்கை, பாரம்பரிய முறை">Cold-pressed, 100% natural,
+                                traditional method</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.8 (874)</span>
+                            </div>
+                            <div class="price">₹125</div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary add-to-cart" data-product="Pure Coconut Oil (500ml)"
+                                    data-price="125">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span data-en="Add to Cart" data-ta="கூடையில் சேர்க்கவும்">Add to Cart</span>
+                                </button>
+                                <button class="btn btn-primary buy-now" data-product="Pure Coconut Oil (500ml)"
+                                    data-price="125">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span data-en="Buy Now" data-ta="இப்போது வாங்கவும்">Buy Now</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="oil-1l">
+                        <img src="/img/coco oil 1l.jpg"
+                            alt="1 liter traditional glass bottle filled with authentic golden coconut oil with coconut and leaves">
+                        <div class="product-info">
+                            <h4 data-en="Pure Coconut Oil (1L)" data-ta="தூய தேங்காய் எண்ணெய் (1 லிட்டர்)">Pure Coconut
+                                Oil (1L)</h4>
+                            <p class="product-desc" data-en="Cold-pressed, 100% natural, family pack"
+                                data-ta="குளிர் அழுத்தப்பட்ட, 100% இயற்கை, குடும்ப பேக்">Cold-pressed, 100% natural,
+                                family pack</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.9 (1,245)</span>
+                            </div>
+                            <div class="price">₹250</div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary add-to-cart" data-product="Pure Coconut Oil (1L)"
+                                    data-price="250">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span data-en="Add to Cart" data-ta="கூடையில் சேர்க்கவும்">Add to Cart</span>
+                                </button>
+                                <button class="btn btn-primary buy-now" data-product="Pure Coconut Oil (1L)"
+                                    data-price="250">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span data-en="Buy Now" data-ta="இப்போது வாங்கவும்">Buy Now</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coconut Products -->
+            <div class="product-category">
+                <h3 data-en="Coconut Products" data-ta="தேங்காய் பொருட்கள்">Coconut Products</h3>
+                <div class="products-grid">
+                    <div class="product-card" data-product-id="coconut-shell">
+                        <img src="/img/coco shell.webp"
+                            alt="Natural brown coconut shells polished and arranged beautifully for craft and decoration purposes">
+                        <div class="product-info">
+                            <h4 data-en="Coconut Shells" data-ta="தேங்காய் சிப்பிகள்">Coconut Shells</h4>
+                            <p class="product-desc" data-en="Natural shells, perfect for crafts & decoration"
+                                data-ta="இயற்கை சிப்பிகள், கைவினை & அலங்காரத்திற்கு ஏற்றது">Natural shells, perfect for
+                                crafts & decoration</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.3 (156)</span>
+                            </div>
+                            <div class="price">₹12 <span class="unit" data-en="per kg" data-ta="ஒரு கிலோவுக்கு">per
+                                    kg</span></div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary add-to-cart" data-product="Coconut Shells"
+                                    data-price="12">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span data-en="Add to Cart" data-ta="கூடையில் சேர்க்கவும்">Add to Cart</span>
+                                </button>
+                                <button class="btn btn-primary buy-now" data-product="Coconut Shells" data-price="12">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span data-en="Buy Now" data-ta="இப்போது வாங்கவும்">Buy Now</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="coconut-coir">
+                        <img src="/img/coconut-husks.webp"
+                            alt="Bundle of natural brown coconut coir fiber used for gardening and traditional rope making">
+                        <div class="product-info">
+                            <h4 data-en="Coconut Husks" data-ta="தேங்காய் நார்">Coconut husks</h4>
+                            <p class="product-desc" data-en="Natural fiber, ideal for gardening & composting"
+                                data-ta="இயற்கை நார், தோட்டக்கலை & உரமாக்கலுக்கு ஏற்றது">Natural fiber, ideal for
+                                gardening & composting</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5 (234)</span>
+                            </div>
+                            <div class="price">₹50 <span class="unit" data-en="per kg" data-ta="ஒரு கிலோவுக்கு">per
+                                    kg</span></div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary add-to-cart" data-product="Coconut Coir"
+                                    data-price="50">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span data-en="Add to Cart" data-ta="கூடையில் சேர்க்கவும்">Add to Cart</span>
+                                </button>
+                                <button class="btn btn-primary buy-now" data-product="Coconut Coir" data-price="50">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span data-en="Buy Now" data-ta="இப்போது வாங்கவும்">Buy Now</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="coconut-water">
+                        <img src="/img/full coco.jpg"
+                            alt="Fresh tender green coconuts with straw showing refreshing natural coconut water drink">
+                        <div class="product-info">
+                            <h4 data-en="Fresh Coconuts" data-ta="புதிய தேங்காய்">Fresh Coconuts</h4>
+                            <p class="product-desc" data-en="Tender coconuts, naturally refreshing & healthy"
+                                data-ta="இளநீர், இயற்கையாக புத்துணர்ச்சி & ஆரோக்கியமானது">Tender coconuts, naturally
+                                refreshing & healthy</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.9 (892)</span>
+                            </div>
+                            <div class="price">₹30 <span class="unit" data-en="per piece" data-ta="ஒரு தேங்காய்க்கு">per
+                                    piece</span></div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary add-to-cart" data-product="Fresh Coconuts"
+                                    data-price="40">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span data-en="Add to Cart" data-ta="கூடையில் சேர்க்கவும்">Add to Cart</span>
+                                </button>
+                                <button class="btn btn-primary buy-now" data-product="Fresh Coconuts" data-price="40">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span data-en="Buy Now" data-ta="இப்போது வாங்கவும்">Buy Now</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="copra">
+                        <img src="/img/sun-dried-coconut-copra.png"
+                            alt="Dried white copra coconut meat pieces arranged on wooden surface with natural lighting">
+                        <div class="product-info">
+                            <h4 data-en="Dried Copra" data-ta="உலர்ந்த கொப்பரை">Dried Copra</h4>
+                            <p class="product-desc" data-en="Sun-dried coconut meat, premium quality"
+                                data-ta="சூரியனில் உலர்த்திய தேங்காய் சதை, உயர்தரம்">Sun-dried coconut meat, premium
+                                quality</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.6 (445)</span>
+                            </div>
+                            <div class="price">₹200 <span class="unit" data-en="per kg" data-ta="ஒரு கிலோவுக்கு">per
+                                    kg</span></div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary add-to-cart" data-product="Dried Copra"
+                                    data-price="80">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span data-en="Add to Cart" data-ta="கூடையில் சேர்க்கவும்">Add to Cart</span>
+                                </button>
+                                <button class="btn btn-primary buy-now" data-product="Dried Copra" data-price="80">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span data-en="Buy Now" data-ta="இப்போது வாங்கவும்">Buy Now</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+
+                    <div class="product-card" data-product-id="coconut-bowls">
+                        <img src="/img/Coconut-Shell-Bowl-949.jpg"
+                            alt="Handcrafted polished coconut shell bowls with smooth natural brown finish on bamboo mat">
+                        <div class="product-info">
+                            <h4 data-en="Coconut Shell Bowls" data-ta="தேங்காய் சிப்பி கிண்ணங்கள்">Coconut Shell Bowls
+                            </h4>
+                            <p class="product-desc" data-en="Handcrafted, eco-friendly serving bowls"
+                                data-ta="கைவினை, சூழல் நட்பு பரிமாறும் கிண்ணங்கள்">Handcrafted, eco-friendly serving
+                                bowls</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.8 (289)</span>
+                            </div>
+                            <div class="price">₹25 <span class="unit" data-en="per set of 2"
+                                    data-ta="2 கிண்ணங்களுக்கு">per set of 2</span></div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary add-to-cart" data-product="Coconut Shell Bowls"
+                                    data-price="25">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span data-en="Add to Cart" data-ta="கூடையில் சேர்க்கவும்">Add to Cart</span>
+                                </button>
+                                <button class="btn btn-primary buy-now" data-product="Coconut Shell Bowls"
+                                    data-price="25">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span data-en="Buy Now" data-ta="இப்போது வாங்கவும்">Buy Now</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-product-id="coconut-bowls">
+                        <img src="/img/sprouted coco.jpeg"
+                            alt="Handcrafted polished coconut shell bowls with smooth natural brown finish on bamboo mat">
+                        <div class="product-info">
+                            <h4 data-en="Sprouted Coconut" data-ta="தேங்காய் சிப்பி கிண்ணங்கள்">Sprouted Coconut
+                            </h4>
+                            <p class="product-desc" data-en="fresh sprouted coconut for a healthy start"
+                                data-ta="இயற்கையின் அருமையான பரிசு, இளமையுடன் முளைத்த தேங்காய்!">fresh sprouted coconut for a healthy start</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5 (359)</span>
+                            </div>
+                            <div class="price">₹20 <span class="unit" data-en="per  piece"
+                                    data-ta="ஒரு பீஸ்">per  piece</span></div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary add-to-cart" data-product="Sprouted Coconut"
+                                    data-price="20">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span data-en="Add to Cart" data-ta="கூடையில் சேர்க்கவும்">Add to Cart</span>
+                                </button>
+                                <button class="btn btn-primary buy-now" data-product="Sprouted Coconut"
+                                    data-price="20">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span data-en="Buy Now" data-ta="இப்போது வாங்கவும்">Buy Now</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2 data-en="Customer Reviews" data-ta="வாடிக்கையாளர் விமர்சனங்கள்">Customer Reviews</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="/img/rajesh.webp"
+                            alt="Happy Indian farmer with traditional turban standing in coconut farm smiling">
+                        <div class="reviewer-info">
+                            <h4>Rajesh Kumar</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p data-en="Excellent quality plants! I purchased 50 medium coconut plants last year and all of them are thriving. The delivery was prompt and the plants were in perfect condition. Highly recommend Deiveegam Nursery!"
+                        data-ta="சிறந்த தர தாவரங்கள்! கடந்த ஆண்டு நான் 50 நடுத்தர தேங்காய் செடிகளை வாங்கினேன், அவை அனைத்தும் சிறப்பாக வளர்கின்றன.">
+                        Excellent quality plants! I purchased 50 medium coconut plants last year and all of them are
+                        thriving. The delivery was prompt and the plants were in perfect condition. Highly recommend
+                        Deiveegam Nursery!</p>
+                    <div class="review-images">
+                        <img src="/img/review1.jpg"
+                            alt="Thriving coconut plants in rows in farm with healthy green growth">
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="/img/lakshmi.jpeg"
+                            alt="Smiling Indian woman in traditional saree holding coconut oil bottle in kitchen setting">
+                        <div class="reviewer-info">
+                            <h4>Lakshmi Priya</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p data-en="The coconut oil is absolutely pure and fragrant. My family has been using it for cooking and hair care. The 1L bottle lasts us a month and the price is very reasonable. Will definitely order again!"
+                        data-ta="தேங்காய் எண்ணெய் முற்றிலும் தூய்மையானது மற்றும் மணம் வாய்ந்தது. என் குடும்பம் சமையல் மற்றும் தலைமுடி பராமரிப்புக்கு இதைப் பயன்படுத்துகிறது.">
+                        The coconut oil is absolutely pure and fragrant. My family has been using it for cooking and
+                        hair care. The 1L bottle lasts us a month and the price is very reasonable. Will definitely
+                        order again!</p>
+                    <div class="review-images">
+                        <img src="/img/coco oil 500ml.jpg"
+                            alt="Pure coconut oil bottles arranged with fresh coconuts on kitchen counter">
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="/img/arune.jpg"
+                            alt="Young Indian gardener in casual clothes with coconut plant in backyard garden happy">
+                        <div class="reviewer-info">
+                            <h4>Arun Selvam</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p data-en="Great service! I ordered 5 large plants for my backyard. They gave me proper guidance on planting and care. Within 2 years, I'm already getting coconuts! Worth every rupee."
+                        data-ta="சிறந்த சேவை! என் பின்புற தோட்டத்திற்கு 5 பெரிய செடிகளை ஆர்டர் செய்தேன். நடவு மற்றும் பராமரிப்பு குறித்த சரியான வழிகாட்டுதலை அவர்கள் வழங்கினர்.">
+                        Great service! I ordered 5 large plants for my backyard. They gave me proper guidance on
+                        planting and care. Within 2 years, I'm already getting coconuts! Worth every rupee.</p>
+                    <div class="review-images">
+                        <img src="/img/arune1.jpg"
+                            alt="Backyard coconut tree bearing fruits with green coconuts hanging">
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="/img/suriya.jpeg"
+                            alt="Middle aged Indian farmer with mustache in field with traditional attire satisfied customer">
+                        <div class="reviewer-info">
+                            <h4>Murugan Chettiar</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p data-en="Best nursery in Salem! I've been a customer for 8 years now. Their plants have excellent survival rate and the staff is very knowledgeable. Free delivery within 25km is a great bonus!"
+                        data-ta="சேலத்தின் சிறந்த நர்சரி! நான் இப்போது 8 ஆண்டுகளாக வாடிக்கையாளராக இருக்கிறேன். அவர்களின் தாவரங்கள் சிறந்த உயிர்வாழும் விகிதத்தைக் கொண்டுள்ளன.">
+                        Best nursery in Salem! I've been a customer for 8 years now. Their plants have excellent
+                        survival rate and the staff is very knowledgeable. Free delivery within 25km is a great bonus!
+                    </p>
+                    <div class="review-images">
+                        <img src="/img/delivery3.jpg"
+                            alt="Large coconut farm plantation with hundreds of healthy trees aerial view">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 data-en="My Cart" data-ta="என் கூடை">My Cart</h3>
+            <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span data-en="Total:" data-ta="மொத்தம்:">Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkoutBtn">
+                <i class="fab fa-whatsapp"></i>
+                <span data-en="Proceed to WhatsApp" data-ta="WhatsApp க்கு செல்லவும்">Proceed to WhatsApp</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-en="About Deiveegam Nursery" data-ta="தெய்வீகம் நர்சரி பற்றி">About Deiveegam Nursery</h3>
+                    <p data-en="Premium coconut plants and products in Salem, Tamil Nadu. Serving customers with quality and care for over 10 years."
+                        data-ta="சேலம், தமிழ்நாட்டில் உயர்தர தேங்காய் செடிகள் மற்றும் பொருட்கள். 10 ஆண்டுகளுக்கும் மேலாக தரம் மற்றும் பராமரிப்புடன் வாடிக்கையாளர்களுக்கு சேவை செய்கிறது.">
+                        Premium coconut plants and products in Salem, Tamil Nadu. Serving customers with quality and
+                        care for over 10 years.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919942198163"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-en="Quick Links" data-ta="விரைவு இணைப்புகள்">Quick Links</h3>
+                    <ul>
+                        <li><a href="#" data-en="Home" data-ta="முகப்பு">Home</a></li>
+                        <li><a href="#products" data-en="Products" data-ta="தயாரிப்புகள்">Products</a></li>
+                        <li><a href="#about" data-en="About Us" data-ta="எங்களை பற்றி">About Us</a></li>
+                        <li><a href="#contact" data-en="Contact" data-ta="தொடர்பு">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-en="Contact Us" data-ta="எங்களை தொடர்பு கொள்ளுங்கள்">Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +91 9942198163</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Salem, Tamil Nadu</li>
+                        <li><i class="fas fa-truck"></i> <span data-en="Free Delivery within 25 KM"
+                                data-ta="25 கி.மீ க்குள் இலவச வீடு வரை பொருள் பெறுதல்">Free Delivery within 25
+                                KM</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-en="Legal" data-ta="சட்ட விதிகள்">Legal</h3>
+                    <ul>
+                        <li><a href="#" id="termsLink" data-en="Terms & Conditions"
+                                data-ta="விதிமுறைகள் & நிபந்தனைகள்">Terms & Conditions</a></li>
+                        <li><a href="#" id="privacyLink" data-en="Privacy Policy" data-ta="தனியுரிமை கொள்கை">Privacy
+                                Policy</a></li>
+                        <li><a href="#" id="refundLink" data-en="Refund Policy"
+                                data-ta="திருப்பி அளிக்கும் கொள்கை">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Deiveegam Nursery. <span data-en="All rights reserved."
+                        data-ta="அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.">All rights reserved.</span></p>
+                <p data-en="Developed by ARD Infotech Team" data-ta="ARD இன்ஃபோடெக் குழுவால் உருவாக்கப்பட்டது">Developed
+                    by <strong><b>ARD Infotech Team</b></strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Terms & Conditions Modal -->
+    <div class="modal" id="termsModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 data-en="Terms & Conditions" data-ta="விதிமுறைகள் & நிபந்தனைகள்">Terms & Conditions</h2>
+            <div class="modal-body">
+                <h3 data-en="1. Introduction" data-ta="1. அறிமுகம்">1. Introduction</h3>
+                <p data-en="Welcome to Deiveegam Nursery. By accessing and using our services, you agree to be bound by these terms and conditions."
+                    data-ta="தெய்வீகம் நர்சரிக்கு வரவேற்கிறோம். எங்கள் சேவைகளை அணுகி பயன்படுத்துவதன் மூலம், இந்த விதிமுறைகள் மற்றும் நிபந்தனைகளுக்கு நீங்கள் ஒப்புக்கொள்கிறீர்கள்.">
+                    Welcome to Deiveegam Nursery. By accessing and using our services, you agree to be bound by these
+                    terms and conditions.</p>
+
+                <h3 data-en="2. Products & Pricing" data-ta="2. தயாரிப்புகள் & விலை நிர்ணயம்">2. Products & Pricing</h3>
+                <p data-en="All coconut plants and products are sold as per the specifications mentioned. Prices are subject to change without prior notice. We reserve the right to modify product descriptions and availability."
+                    data-ta="அனைத்து தேங்காய் செடிகள் மற்றும் தயாரிப்புகளும் குறிப்பிடப்பட்ட விவரக்குறிப்புகளின்படி விற்கப்படுகின்றன.">
+                    All coconut plants and products are sold as per the specifications mentioned. Prices are subject to
+                    change without prior notice. We reserve the right to modify product descriptions and availability.
+                </p>
+
+                <h3 data-en="3. Delivery Policy" data-ta="3. வீடு வரை பொருள் பெறுதல் கொள்கை">3. Delivery Policy</h3>
+                <p data-en="Free delivery is provided within 25 kilometers from Salem, Tamil Nadu. Delivery charges apply for locations beyond this range. Delivery time may vary based on location and weather conditions."
+                    data-ta="தமிழ்நாடு சேலத்திலிருந்து 25 கிலோமீட்டருக்குள் இலவச வீடு வரை பொருள் பெறுதல் வழங்கப்படுகிறது.">
+                    Free delivery is provided within 25 kilometers from Salem, Tamil Nadu. Delivery charges apply for
+                    locations beyond this range. Delivery time may vary based on location and weather conditions.</p>
+
+                <h3 data-en="4. Plant Care & Warranty" data-ta="4. செடி பராமரிப்பு & உத்தரவாதம்">4. Plant Care &
+                    Warranty</h3>
+                <p data-en="We guarantee healthy plants at the time of delivery. However, survival and growth depend on proper care and environmental conditions. We provide care instructions with every purchase."
+                    data-ta="விநியோகத்தின் போது ஆரோக்கியமான தாவரங்களுக்கு நாங்கள் உத்தரவாதம் அளிக்கிறோம்.">We guarantee
+                    healthy plants at the time of delivery. However, survival and growth depend on proper care and
+                    environmental conditions. We provide care instructions with every purchase.</p>
+
+                <h3 data-en="5. Returns & Refunds" data-ta="5. திரும்பப் பெறுதல் & பணத்தைத் திருப்பித் தருதல்">5.
+                    Returns & Refunds</h3>
+                <p data-en="Returns are accepted only if plants are damaged during delivery. Please contact us within 24 hours of delivery with photographic evidence. Refunds will be processed after inspection."
+                    data-ta="விநியோகத்தின் போது செடிகள் சேதமடைந்தால் மட்டுமே திரும்பப் பெறுதல் ஏற்றுக்கொள்ளப்படும்.">
+                    Returns are accepted only if plants are damaged during delivery. Please contact us within 24 hours
+                    of delivery with photographic evidence. Refunds will be processed after inspection.</p>
+
+                <h3 data-en="6. Payment Methods" data-ta="6. பணம் செலுத்தும் முறைகள்">6. Payment Methods</h3>
+                <p data-en="We accept cash on delivery, UPI payments, and bank transfers. Payment must be completed before or at the time of delivery as agreed."
+                    data-ta="பணம் மீது வீடு வரை பொருள் பெறுதல், UPI பணம் செலுத்துதல் மற்றும் வங்கி பரிமாற்றங்களை நாங்கள் ஏற்றுக்கொள்கிறோம்.">
+                    We accept cash on delivery, UPI payments, and bank transfers. Payment must be completed before or at
+                    the time of delivery as agreed.</p>
+
+                <h3 data-en="7. Contact & Support" data-ta="7. தொடர்பு & ஆதரவு">7. Contact & Support</h3>
+                <p data-en="For any queries or support, please contact us at +91 9942198163 or through WhatsApp. Our team is available during business hours to assist you."
+                    data-ta="ஏதேனும் கேள்விகள் அல்லது ஆதரவுக்கு, தயவுசெய்து +91 9942198163 இல் அல்லது WhatsApp மூலம் எங்களை தொடர்பு கொள்ளவும்.">
+                    For any queries or support, please contact us at +91 9942198163 or through WhatsApp. Our team is
+                    available during business hours to assist you.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
